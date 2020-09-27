@@ -320,7 +320,7 @@ class SaleOrder(models.Model):
     @api.depends('state')
     def _compute_type_name(self):
         for record in self:
-            record.type_name = _('Quotation') if record.state in ('draft', 'sent', 'cancel') else _('Sales Order AP final nuevo')
+            record.type_name = _('Quotation') if record.state in ('draft', 'sent', 'cancel') else _('Sales Order AP final nuevo cambio 2')
 
     def unlink(self):
         for order in self:
